@@ -1,0 +1,51 @@
+$playerBarWidth: 1485px;
+
+.playerControlsContainer {
+    position: relative;
+
+    button.playerButton {        
+        background-color: transparent;
+        height: 100%;
+        width: 50px;   
+        margin-right: 10px;     
+    }
+
+    div.progressBarContainer {
+        display: inline-block;
+        position: relative;
+        width: $playerBarWidth;
+        height: 20px;
+        overflow: hidden;
+        border-radius: 25px;
+
+        div.scrubberBar {
+            display: inline-block;
+            position: absolute;
+            background-color: #808080;
+            height: 20px;
+            width: $playerBarWidth;
+            bottom: 0px;
+            border-radius: 25px;
+        }
+
+        div.bufferBar {
+            display: inline-block;
+            position: absolute;
+            background-color: #E0E0E0;
+            height: 20px;
+            width: 0;//$playerBarWidth * 0.75;
+            bottom: 0px;
+            border-radius: 25px;
+        }
+
+        div.playPositionBar {
+            display: inline-block;
+            position: absolute;
+            background-color: #FF0000;
+            height: 20px;
+            width: 0;//$playerBarWidth * 0.25;
+            bottom: 0px;
+            border-radius: 25px;
+        }
+    }
+}

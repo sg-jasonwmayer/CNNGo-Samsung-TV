@@ -1,0 +1,168 @@
+****************NEED TO MOVE THIS TO A WIKI SOMEWHERE*******************************
+
+//How long to display the CNNGO splash screen on startup
+splashSreenTimeout: 5000
+
+//Timeout to auto-hide global navigation in milliseconds
+globalNavigationTimeOut: 10000
+
+//Timeout to auto-move-right the carousel in milliseconds
+moveRightTimeOut: 5000
+
+//Timeout to wait for next Ok click in milliseconds
+timeoutUntilNextKey: 500
+
+//Video Header Timeout
+timeoutVideoHeader: 5000
+
+//Superbar hiding timeout
+timeoutSuperbar: 15000
+
+//Video Progress Report Duration
+videoProgressReportDuration: 60 *1000
+
+//Number of visible assets on a swimlane usually determined by the viewport and the asset width. The result of that is 5 currently. Need to update this value in the event of:
+// 1) asset width change
+// 2) screen resolution change
+numberOfVisibleSwimLaneAssets: 5
+
+// Number of Swim Lanes on Must See Screen
+numberOfMustSeeSwimLanes: 20
+
+//Set to true to enable all debug logs
+debug: false
+
+//The time offset applied to all cable boxes
+cableBoxOffset: 5
+
+//The additional time offset that is added to the cable box offset if we are on a DTV client
+clientBoxExtraOffset: 0
+
+// fireTV Offsets
+firetvLiveDelay: 60
+firetvLiveStreamDuration: ((6*60*60)-4)
+
+//The amount of time until we give up on playing a show/segment
+timeTillFail: 15
+
+//The additional time that we give clients to play a video before we give up. (They are a bit slow)
+clientBoxExtraTimeTillFail: 10
+
+//The amount of time until we hide the superbar due to inactivity
+inactiveMaximize: 60
+
+//The amount of time until we hide the extra controls due to inactivity
+inactiveExtra: 10
+
+//The amount of times we attempt to load data till we fail
+dataRetrievalAttempts: 3
+
+//Channel to tune to for CNN
+channel: 202
+
+//Tuned channel can be different than the normal replay channel.
+//NOTE: This is overwritten on app load to be dynamic to the channel the app was started on.
+tunedChannel: 202
+
+//Valid Enviorment Overrides
+validEnvironments: ['prod' 'dev' 'qa' 'ref' 'staging']
+
+//Max breadcrumb length
+maxBreadCrumbLength: 27
+
+// Carousel delay used when determining long presse keydowns
+// No longer used remove from static config also
+// longPressDelay: 600
+
+// Video fast forward and rewind stepping speed
+videoSeekSpeed: 5
+
+// Show the history logger a UI element on top right of page shows the history path. Used to help debug the back button issues.
+showHistoryLogger: false
+
+//External Config will overwrite configs from this file
+externalConfigUrl: 'http://config.outturner.com/connected-devices/firetv/dev/1.0.0/firetv_config.json'
+
+//URLs used for data loading
+urls: {
+    backtrace: 'https://prod.directv.10f.go.cnn.com/api/v1/schedule/' //'http://platformproxy.app.acme.so/api/v1/schedule?scheduleWindow=18'
+    vod: 'http://platformproxy.app.acme.so/api/v1/listings'
+    rundown: 'http://time.ng.cnn.com/v2/rundown'
+    show: 'http://time.ng.cnn.com/v2/show/'
+    segment: 'http://time.ng.cnn.com/v2/segment/'
+    adManifest: 'http://manifest.auditude.com/auditude/variant/'
+    ODM: 'http://darwin.odm.platform.outturner.com/client/api/v1.5/' 
+    platformApi: 'http://api.platform.cnn.com/api/v1.5/'
+    liveFeed: 'http://phls-live.cdn.turner.com/cnn/cnnx/hls/stream.m3u8'
+    liveAdFeed: 'http://cnngo-i.akamaihd.net/hls/live/226703/cnngo/hls/master.m3u8'
+    analytics: 'http://metrics.cnn.com/b/ss//6'
+    buildNumber: '/healthcheck.json'
+}
+// Configuration for ads
+ad: {
+    zone: 131829
+    assetId: 'ac217921a4a853e52310ebc459eef367'
+    debug: true
+    manifestPattern: '{url}{eid}/{b64url}.m3u8?__sid__={sid}&u={assetId}&z={adobeZone}&k=stream={target};caid={id};udid={uuid}&pttimeline='{timeline}&pttrackingmode={trackingMode}&pttrackingversion={trackingVersion}&ptdebug={debug}'
+    manifestPatternStream: '{url}/{target}/{b64url}.m3u8?__sid__={sid}&u={assetId}&z={adobeZone}&k=stream={target};udid={uuid}&pttrackingmode={trackingMode}&pttrackingversion={trackingVersion}&ptcueformat=turner&ptdebug={debug}'
+    trackingMode: 'sstm'
+    trackingVersion: 'v1'
+    clips: {
+        idPrefix: 'cnn-'
+        adPattern: [false true false]
+    }
+    target: {
+        default: false
+        preroll: 'CNNGo-fire-vod-pre'
+        midroll: 'CNNGo-fire-vod'
+        live: 'CNNGo-fire-live-mid'
+    }
+    "adtoggle": { // any value != true will skip dai injection
+        "cnn": true,
+        "cnni": true,
+        "hln": true,
+        "vod": false,
+        "clips": false
+    }
+}
+
+//Configurations that manage how much backtrace data to retrieve
+backtrace: {
+    behindHours: 6
+    aheadHours: 2
+}
+
+//Configurations that manage the rundown data aquired and shown
+rundown: {
+    lookBehindHours: 6
+    lookAheadHours: 2
+    includeEnhancedContent: false
+    validEnhancedContent: [
+        'Video'
+        'Photogallery'
+    ]
+}
+
+//Configurations to modify the superbar's behavior
+superbar: {
+    translate: {
+        x: 504 // width of li item + left & right margin of 2px each
+        y: 62 // was 46 add 16px for bigger font-size/line-height collapsed viewmaster height is 40px + top-margin of next viewmaster ul is 22px
+    }
+}
+
+
+authentication: {
+    tokenUrl: 'http://token.vgtf.net/token/token_spe' //config for Authentication
+}
+
+};
+
+self.dev = {
+superbar: {
+    translate: {
+        x: 504 // width of li item + left & right margin of 2px each
+        y: 62 // was 46 add 16px for bigger font-size/line-height collapsed viewmaster height is 40px + top-margin of next viewmaster ul is 22px
+    }
+}
+};

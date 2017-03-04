@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="app.style1">
+<head>
+    <meta charset="utf-8">
+    <title>CAPH, For High performance web app.</title>
+    <link href="lib/caph/caph.min.css" rel="stylesheet" type="text/stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Include js file for popular js libraries  -->
+    <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="lib/caph/caph-angular.min.js"></script>
+
+	<!--Include js file for Touch Event -->
+	<script type="text/javascript" src="lib/hammer.min.js"></script>
+   
+
+    <!-- Include js file for app -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controller.js"></script>
+    <script type="text/javascript" src="scripts/directives/list.js"></script>
+    <script type="text/javascript" src="scripts/directives/caphMedia.js"></script>
+    <script type="text/javascript" src="scripts/utils/constant.js"></script>
+    
+    <script type='text/javascript' src='$WEBAPIS/webapis/webapis.js'></script>
+    <script type="text/javascript" src="scripts/videoPlayer.js"></script>
+
+
+
+</head>
+<body ng-controller="controller">
+
+<!-- Welcome : It will disappear when '$scope.isInitCompleted' become 'false'. -->
+<div class="welcome" ng-class="{'fade-out': isInitCompleted}"></div>
+<object id="av-player" type="application/avplayer"></object>
+<div id="displayWrapper" class="wrapper" ng-include="'views/main.html'"></div>
+
+</body>
+</html>

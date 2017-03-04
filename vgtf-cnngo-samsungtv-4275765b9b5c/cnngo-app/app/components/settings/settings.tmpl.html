@@ -1,0 +1,53 @@
+<div>
+	<div class="settings-container">
+	     <div class="settings-content">
+			<div class="content">
+				
+					<div class="settings-navigation">
+					
+						<nav>
+							<ul>
+								<li id="settingsSignIn" style="">
+									<div class="settingsMenuItem" id="signInLink" title="Sign In" ng-class="{'active' :transition=='slide-top'}" focusable data-focusable-depth="3" data-focusable-group="settingsNav" data-focusable-name="signIn" data-focusable-next-focus-up="globalSettings" data-focusable-next-focus-down="accessibility" data-focusable-next-focus-right="signInPage" on-focused="onFocus('signIn')" on-blurred="onBlur()" on-selected="nav('signIn')">
+										<a href="#">{{signInTitle}}</a>
+									</div>
+								</li>
+								<li id="settingsMyCNN" style="">
+									<div class="settingsMenuItem" id="accessibilityLink" title="right" ng-class="{'active':transition=='slide-top'}" focusable data-focusable-depth="3" data-focusable-group="settingsNav" data-focusable-name="accessibility" data-focusable-next-focus-up="signIn" data-focusable-next-focus-down="privacyPolicy" data-focusable-next-focus-right="null" on-focused="onFocus('accessibility')" on-blurred="onBlur()" on-selected="nav('accessibility')">
+										<a href="#">Accessibility</a>
+									</div>
+								</li>
+								<li id="settingsPrivacyPolicy" style="">
+									<div class="settingsMenuItem" id="privacyPolicyLink" title="top" ng-class="{'active':transition=='slide-top'}" focusable data-focusable-depth="3" data-focusable-group="settingsNav" data-focusable-name="privacyPolicy" data-focusable-next-focus-up="accessibility" data-focusable-next-focus-down="termsConditions" data-focusable-next-focus-right="null" on-focused="onFocus('privacyPolicy')" on-blurred="onBlur()" on-selected="nav('privacyPolicy')">
+										<a href="#">Privacy Policy</a>
+									</div>
+								</li>
+								<li id="settingsTermsAndConditions" style="margin-bottom:60px;">
+									<div class="settingsMenuItem" id="termsConditionsLink" title="bottom" ng-class="{'active':transition=='slide-top'}" focusable data-focusable-depth="3" data-focusable-group="settingsNav" data-focusable-name="termsConditions" data-focusable-next-focus-up="privacyPolicy" data-focusable-next-focus-down="null" data-focusable-next-focus-right="null" on-focused="onFocus('termsConditions')" on-blurred="onBlur()" on-selected="nav('termsConditions')">
+										<a href="#">Terms & Conditions</a>
+									</div>
+								</li>
+							</ul>
+								<div class="build-number">Build V_.26</div>
+						</nav>
+					</div>
+					  <div class="settings-overlay">
+							<!-- <div class="build-details">
+							<span class="number">
+                                  {{sttc.buildNumber}} 
+							</span>
+							<span class="env">
+								 {{sttc.buildEnv}} 
+							</span>
+							<span class="serverEnv" ng-if="sttc.serverEnv != 'prod'">
+							{{sttc.serverEnv}}
+							</span>
+						</div>-->
+					</div>
+					<div ui-view ng-class="transition" class="settings-child-content">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

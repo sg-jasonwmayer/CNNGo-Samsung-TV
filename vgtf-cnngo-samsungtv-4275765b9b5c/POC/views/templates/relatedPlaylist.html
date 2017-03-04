@@ -1,0 +1,12 @@
+<div class="list-area">
+<div class="title font-label" ng-class="{'title-opacity': currentCategory !== CATEGORY.RELATED_PLAY_LIST}">Related play list</div>
+    <caph-list id="list-related-talks" container-class="list-container" wrapper-class="list-scroll-wrapper" items="item in relatedPlaylist" mouse-scroll-area-size="30">
+        <div class="item" focusable="{depth: DEPTH.DETAIL, group: '5'}" on-focused="focus($event, CATEGORY.RELATED_PLAY_LIST, this)" on-selected="selected($event, CATEGORY.RELATED_PLAY_LIST, this,$index)">
+            <div class="loader" ng-show="item.loaded === false"></div>
+            <div class="content" ng-hide="item.loaded === false" style="background: url({{item.photo_urls[0].url || ''}});-webkit-background-size:100% 100%;">
+            <div class="text font-label">
+            <div class="font-info">{{item.name}}</div>{{item.name}}</div>
+            </div>
+        </div>
+    </caph-list>
+</div>

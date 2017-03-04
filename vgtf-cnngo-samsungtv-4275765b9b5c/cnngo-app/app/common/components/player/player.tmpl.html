@@ -1,0 +1,13 @@
+<div class='playerContainer'>
+	<div class='overlay'>
+	    <div class='adTimer' ng-if='pc.getAdCurrentTime() > 0'>Your video will play in {{pc.adCurrentTime}} seconds</div>
+
+		<div class='upNextContainer' ng-show='pc.showUpNextOverlay'>
+			<img class='upNextImage' src='{{pc.upNextURL}}'/>
+			<div class='upNextCounter fontListText'>In {{pc.upNextCounter}} seconds</div>
+			<div class='upNextTitle'>{{pc.upNextTitle}}</div>
+		</div>	    
+	</div>
+
+	<object id="avPlayer" class="fullScreenMode" type="application/avplayer"></object>
+</div>

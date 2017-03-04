@@ -1,0 +1,35 @@
+<div class="box" ng-class="classname"> 
+	<div align="center" class="login">
+		<div ng-if="!isAuthenticated">
+			<div>
+				<div class='activation' ng-class="{'backgroundBlack': isModal == true}" align="center">
+					<div class="signin-content" style="color:white; font-size: 22px; ">
+						<h1><img src="/assets/images/menuLogo_activate.png"/></h1>
+
+						<p>To activate go to cnn.it/samsungtv
+							<br/>
+							<br/>on any browser and enter the activtion code</p>
+						
+
+						<h3 class="regCode">{{regCode}}</h3>
+						<p>This page will close automatically
+						<br/>
+						<br/>once the code is accepted.</p>
+
+						<div class="reg-buttons" id="GET_NEW_CODE">
+							<button id="{{newRegCodeButtonID}}" focusable data-focusable-depth="{{focusLevel}}" data-focusable-group="{{newRegCodeButtonGroupName}}" data-focusable-name="{{newRegCodeButtonName}}" data-focusable-next-focus-up="null" data-focusable-next-focus-down="null" data-focusable-next-focus-right="null" data-focusable-next-focus-left="{{leftFocusItem}}" on-focused="onFocusButton('{{newRegCodeButtonID}}')" on-blurred="onBlurButton('{{newRegCodeButtonID}}')" on-selected="getNewRegCode()" ng-class="">Get New Code</button> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="activation" ng-if="isAuthenticated && !isModal">
+			<div class="activationSuccessfulImageContainer"><img class="activationSuccessfulImage" src="/assets/images/menuLogo_activate.png"/></div>
+			<h3 class="activationSuccessfulMessage">Activation Successful!</h3>
+			<div class="cobrandLogoContainer"><img class="cobrandLogo" src="{{cobrandLogoUrl}}"/></div>	
+			<div class="reg-buttons" id="LOGOUT">
+				<button id="{{logoutButtonID}}" focusable data-focusable-depth="{{focusLevel}}" data-focusable-group="{{newRegCodeButtonGroupName}}" data-focusable-name="{{logoutButtonName}}" data-focusable-next-focus-up="null" data-focusable-next-focus-down="null" data-focusable-next-focus-right="null" data-focusable-next-focus-left="{{leftFocusItem}}" on-focused="onFocusButton('{{logoutButtonID}}')" on-blurred="onBlurButton('{{logoutButtonID}}')" on-selected="logout()" ng-class="">Sign Out</button> 
+			</div>
+		</div>
+	</div>
+</div>

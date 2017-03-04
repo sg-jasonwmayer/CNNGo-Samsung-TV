@@ -1,0 +1,1463 @@
+/* colors */
+/* font */
+@font-face {
+  font-family: CNNSansDisplay;
+  src: url("../fonts/CNNSansDisplayW04-Regular.woff2") format("woff2"), url("../fonts/CNNSansDisplayW04-Regular.woff") format("woff");
+  font-family: CNNSansDisplayLight;
+  src: url("../fonts/CNNSans-Light.ttf") format("ttf"), url("../fonts/CNNSansDisplayW04-Light.woff2") format("woff2"), url("../fonts/CNNSansDisplayW04-Light.woff") format("woff");
+}
+/* line 12, ../../app/common/components/core/styles/_fonts.scss */
+.fontNavigation {
+  font: 34px CNNSansDisplayLight;
+}
+
+/* line 16, ../../app/common/components/core/styles/_fonts.scss */
+.fontNavigationFocus, .navItem.focused, .selectedNav {
+  font-weight: bold;
+}
+
+/* line 20, ../../app/common/components/core/styles/_fonts.scss */
+.fontListText {
+  font: 24px CNNSansDisplayLight;
+}
+
+/* line 24, ../../app/common/components/core/styles/_fonts.scss */
+.fontListTitle {
+  font: 34px CNNSansDisplay;
+  font-weight: bold;
+}
+
+/* line 29, ../../app/common/components/core/styles/_fonts.scss */
+.fontMessageText {
+  font: 34px CNNSansDisplay;
+}
+
+/* line 1, ../../app/common/components/core/styles/_base.scss */
+body {
+  color: #e6e6e6;
+  font-size: 30px;
+  line-height: 1.35em;
+  font-family: "CNNSansDisplayLight", serif;
+  letter-spacing: .04em;
+  height: 1080px;
+  overflow: hidden;
+  background-color: black;
+  margin: 0px;
+}
+
+/* line 13, ../../app/common/components/core/styles/_base.scss */
+.mainContainer {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 22, ../../app/common/components/core/styles/_base.scss */
+.mainView {
+  height: 100%;
+}
+
+/* line 26, ../../app/common/components/core/styles/_base.scss */
+button {
+  width: 340px;
+  height: 90px;
+  border: none;
+  background-color: #404040;
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform .25s;
+  border-radius: 7px;
+}
+/* line 38, ../../app/common/components/core/styles/_base.scss */
+button:first-child {
+  margin-right: 90px;
+}
+/* line 40, ../../app/common/components/core/styles/_base.scss */
+button:first-child.continue {
+  margin: 80px 0 0 20px;
+}
+/* line 45, ../../app/common/components/core/styles/_base.scss */
+button.focus {
+  outline: 3px solid white;
+  outline-offset: -3px;
+}
+
+/* line 51, ../../app/common/components/core/styles/_base.scss */
+.selectedButton {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* line 1, ../../app/common/components/core/styles/_util.scss */
+.hidden {
+  display: none !important;
+}
+
+/* line 5, ../../app/common/components/core/styles/_util.scss */
+.inline {
+  display: inline;
+}
+
+/* line 9, ../../app/common/components/core/styles/_util.scss */
+.backgroundBlack {
+  background-color: #000000;
+}
+
+/* line 1, ../../app/common/components/main/_main.scss */
+.masterContainer {
+  position: relative;
+  height: 100%;
+}
+/* line 5, ../../app/common/components/main/_main.scss */
+.masterContainer .masterHeader {
+  position: absolute;
+  background-image: url("../images/global_nav.png");
+  background-origin: content-box;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 10;
+}
+/* line 16, ../../app/common/components/main/_main.scss */
+.masterContainer .mainContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 5;
+}
+/* line 26, ../../app/common/components/main/_main.scss */
+.masterContainer .slideOut {
+  height: 0px;
+}
+/* line 30, ../../app/common/components/main/_main.scss */
+.masterContainer .modalContainer {
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/* line 37, ../../app/common/components/main/_main.scss */
+.masterContainer .modalContainer .modal {
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+/* line 46, ../../app/common/components/main/_main.scss */
+.masterContainer .playerControlsOuterContainer {
+  position: absolute;
+  width: 100%;
+  height: 26px;
+  bottom: 60px;
+  padding: 0 50px 0 50px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+/* line 56, ../../app/common/components/main/_main.scss */
+.masterContainer .loadingScreen, .masterContainer .videoContentLoading, .masterContainer .mainContentLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/cnnDarkBg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* line 67, ../../app/common/components/main/_main.scss */
+.masterContainer .videoContentLoading {
+  z-index: 2;
+}
+/* line 72, ../../app/common/components/main/_main.scss */
+.masterContainer .mainContentLoading {
+  z-index: 6;
+}
+/* line 77, ../../app/common/components/main/_main.scss */
+.masterContainer .loadingSpinner {
+  position: absolute;
+  left: 915px;
+  top: 350px;
+  width: 90px;
+  height: 91px;
+  background: url("../images/busySpinner.png");
+  -webkit-animation: rotate 2.5s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* line 1, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.brandingContainer {
+  margin-left: 75px;
+  margin-top: 30px;
+  max-width: 450px;
+  max-height: 100px;
+  float: left;
+}
+/* line 8, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.brandingContainer img {
+  display: inline;
+}
+/* line 12, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.brandingContainer .cnnMainLogo {
+  height: 60px;
+  margin-right: 10px;
+}
+/* line 17, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.brandingContainer .cobrandingMainLogo {
+  padding-left: 15px;
+  border-left: 1px solid #FFFFFF;
+  max-height: 40px;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+/* line 26, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.navigationContainer {
+  position: absolute;
+  height: 100px;
+  width: 1920px;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  background: transparent;
+}
+
+/* line 35, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.navItem {
+  margin: 35px 55px 0px 55px;
+  opacity: 0.7;
+  -webkit-transition: .5s;
+}
+/* line 40, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.navItem.focused {
+  opacity: 1.0 !important;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transition: .5s;
+}
+
+/* line 48, ../../app/common/components/globalNavigation/_globalNavigation.scss */
+.selectedNav {
+  opacity: 0.7;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+}
+
+/* line 1, ../../app/common/components/playList/_playList.scss */
+.listArea {
+  width: 1920px;
+  height: 345px;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
+  margin-bottom: 80px;
+}
+/* line 9, ../../app/common/components/playList/_playList.scss */
+.listArea .title {
+  width: inherit;
+  height: 28px;
+  margin: 0 0 25px 75px;
+}
+/* line 15, ../../app/common/components/playList/_playList.scss */
+.listArea .listContainer {
+  position: absolute;
+  width: 1920px;
+  height: 355px;
+  margin-top: 10px;
+  margin-left: 75px;
+}
+/* line 23, ../../app/common/components/playList/_playList.scss */
+.listArea .listScrollWrapper {
+  left: 0px;
+}
+
+/* line 28, ../../app/common/components/playList/_playList.scss */
+.item {
+  position: relative;
+  width: 400px;
+  height: 325px;
+  margin: 0 50px 30px 0;
+  background-color: #1a1a1a;
+}
+/* line 35, ../../app/common/components/playList/_playList.scss */
+.item .itemContainer {
+  width: 400px;
+  background-color: #1a1a1a;
+  -webkit-transition: .25s ease-in;
+}
+/* line 41, ../../app/common/components/playList/_playList.scss */
+.item.focused .itemContainer {
+  background-color: #1a1a1a;
+  border: #e6e6e6 5px solid;
+  border-radius: 5px;
+  -webkit-transition: .25s ease-out;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+}
+/* line 49, ../../app/common/components/playList/_playList.scss */
+.item .content {
+  max-width: 440px;
+  height: 225px;
+  background-size: contain;
+  background-position: center;
+}
+/* line 55, ../../app/common/components/playList/_playList.scss */
+.item .content .duration {
+  position: absolute;
+  top: 185px;
+  right: 0px;
+  width: 100px;
+  height: 45px;
+  text-align: center;
+  line-height: 40px;
+  color: #e6e6e6 !important;
+  background-color: #1a1a1a;
+}
+/* line 68, ../../app/common/components/playList/_playList.scss */
+.item .itemDescription {
+  width: inherit;
+  height: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* line 76, ../../app/common/components/playList/_playList.scss */
+.categoriesListArea {
+  width: 1920px;
+  height: 240px;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
+  margin-bottom: 80px;
+}
+/* line 84, ../../app/common/components/playList/_playList.scss */
+.categoriesListArea .categoriesTitle {
+  width: inherit;
+  height: 28px;
+  margin: 0 0 25px 75px;
+}
+/* line 90, ../../app/common/components/playList/_playList.scss */
+.categoriesListArea .categoriesListContainer {
+  position: absolute;
+  width: 1920px;
+  height: 240px;
+  margin-top: 10px;
+  margin-left: 75px;
+}
+/* line 98, ../../app/common/components/playList/_playList.scss */
+.categoriesListArea .listScrollWrapper {
+  left: 0px;
+}
+
+/* line 103, ../../app/common/components/playList/_playList.scss */
+.categoryItem {
+  position: relative;
+  width: 403px;
+  height: 227px;
+  margin: 0 50px 0 0;
+  border: 5px solid transparent;
+}
+/* line 110, ../../app/common/components/playList/_playList.scss */
+.categoryItem .categoryContent {
+  width: auto;
+  height: 217px;
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: .25s ease-in;
+}
+/* line 118, ../../app/common/components/playList/_playList.scss */
+.categoryItem.focused .categoryContent {
+  border-radius: 5px;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transition: .25s ease-out;
+  border: 5px solid #e6e6e6;
+}
+
+/* line 126, ../../app/common/components/playList/_playList.scss */
+.categoryListArea {
+  margin-left: 80px;
+}
+
+/* line 130, ../../app/common/components/playList/_playList.scss */
+.liveListArea {
+  width: 1920px;
+  height: 236px;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
+  margin-bottom: 80px;
+}
+/* line 138, ../../app/common/components/playList/_playList.scss */
+.liveListArea .liveTitle {
+  width: inherit;
+  height: 28px;
+  margin: 0 0 25px 75px;
+}
+/* line 144, ../../app/common/components/playList/_playList.scss */
+.liveListArea .liveListContainer {
+  position: absolute;
+  width: 1920px;
+  height: 236px;
+  margin-top: 10px;
+  margin-left: 75px;
+}
+/* line 152, ../../app/common/components/playList/_playList.scss */
+.liveListArea .listScrollWrapper {
+  left: 0px;
+}
+
+/* line 157, ../../app/common/components/playList/_playList.scss */
+.liveItem {
+  position: relative;
+  width: 547px;
+  height: 200px;
+  margin: 0 50px 0 0;
+  border: 5px solid transparent;
+}
+/* line 164, ../../app/common/components/playList/_playList.scss */
+.liveItem .liveItemContainer {
+  position: absolute;
+  height: 200px;
+  width: 547px;
+  -webkit-transition: .25s ease-in;
+}
+/* line 171, ../../app/common/components/playList/_playList.scss */
+.liveItem.focused .liveItemContainer {
+  border-radius: 5px;
+  border: 5px solid #e6e6e6;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transition: .25s ease-out;
+}
+/* line 178, ../../app/common/components/playList/_playList.scss */
+.liveItem .liveContent {
+  width: auto;
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+}
+/* line 185, ../../app/common/components/playList/_playList.scss */
+.liveItem .liveIconWrapper {
+  position: absolute;
+  left: 10px;
+  top: 165px;
+}
+/* line 190, ../../app/common/components/playList/_playList.scss */
+.liveItem .liveIconWrapper .liveRedIcon {
+  float: left;
+  width: 27px;
+  height: 27px;
+  background-image: url("../images/redButton.png");
+}
+/* line 197, ../../app/common/components/playList/_playList.scss */
+.liveItem .liveIconWrapper .liveTextIcon {
+  float: left;
+  width: 112px;
+  height: 32px;
+  margin-left: 10px;
+  background-image: url("../images/liveMenuButton.png");
+}
+/* line 206, ../../app/common/components/playList/_playList.scss */
+.liveItem .liveChannelLock {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 15px;
+  height: 20px;
+  background-image: url("../images/lockIcon.png");
+}
+
+/* line 217, ../../app/common/components/playList/_playList.scss */
+.seriesListArea {
+  width: 1920px;
+  height: 390px;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
+  margin-bottom: 80px;
+}
+/* line 225, ../../app/common/components/playList/_playList.scss */
+.seriesListArea .seriesTitle {
+  width: inherit;
+  height: 28px;
+  margin: 0 0 25px 75px;
+}
+/* line 231, ../../app/common/components/playList/_playList.scss */
+.seriesListArea .seriesListContainer {
+  position: absolute;
+  width: 1920px;
+  height: 390px;
+  margin-top: 10px;
+  margin-left: 75px;
+}
+/* line 239, ../../app/common/components/playList/_playList.scss */
+.seriesListArea .listScrollWrapper {
+  left: 0px;
+}
+
+/* line 244, ../../app/common/components/playList/_playList.scss */
+.seriesGridArea {
+  margin-bottom: 30px !important;
+}
+
+/* line 248, ../../app/common/components/playList/_playList.scss */
+.seriesItem {
+  position: relative;
+  width: 251.3px;
+  margin: 0 35px 0 0;
+  border: 5px solid transparent;
+}
+/* line 254, ../../app/common/components/playList/_playList.scss */
+.seriesItem .seriesContent {
+  width: auto;
+  height: 368px;
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: .25s ease-in;
+}
+/* line 262, ../../app/common/components/playList/_playList.scss */
+.seriesItem.focused .seriesContent {
+  border-radius: 5px;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transition: .25s ease-out;
+  border: 5px solid #e6e6e6;
+}
+
+/* line 270, ../../app/common/components/playList/_playList.scss */
+.nowPlayingContainer {
+  position: absolute;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  top: 185px;
+  height: 40px;
+  width: 260px;
+  background-color: #8e0011;
+}
+/* line 280, ../../app/common/components/playList/_playList.scss */
+.nowPlayingContainer .nowplayingtext {
+  text-transform: uppercase;
+  color: #e6e6e6 !important;
+}
+/* line 285, ../../app/common/components/playList/_playList.scss */
+.nowPlayingContainer .nowPlayingImg {
+  height: 30px;
+  width: 30px;
+  padding-left: 3px;
+}
+
+/* line 292, ../../app/common/components/playList/_playList.scss */
+.vodListArea {
+  position: relative;
+  height: 0px;
+  width: 1920px;
+  padding-top: 10px;
+  -webkit-animation: episodesOpen .5s forwards;
+  -webkit-transition: background .07s;
+  top: -30px;
+  z-index: -5;
+}
+/* line 302, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods {
+  position: relative;
+  z-index: 2;
+  margin: 20px 0 0 75px;
+}
+/* line 307, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .vodContainer {
+  position: absolute;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  height: 300px;
+  width: 1920px;
+}
+/* line 314, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .vodContainer .episodeContainer {
+  width: 400px;
+  height: 300px;
+  margin-right: 40px;
+}
+/* line 319, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .vodContainer .episodeContainer .vodItem {
+  position: relative;
+  height: 225px;
+  width: 400px;
+  -webkit-transition: .25s ease-in;
+}
+/* line 325, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .vodContainer .episodeContainer .vodItem .vodLock {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 15px;
+  height: 20px;
+  background-image: url("../images/lockIcon.png");
+}
+/* line 335, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .vodContainer .episodeContainer.focused .vodItem {
+  border: 5px white solid;
+  background: white;
+  border-radius: 5px;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transition: .25s ease-out;
+}
+/* line 345, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .episodeTitle {
+  position: relative;
+  top: 20px;
+}
+/* line 350, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .seasonTitle {
+  font-size: 48px;
+}
+/* line 354, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .episodeDescription {
+  position: absolute;
+  margin-top: 20px;
+  width: 500px;
+  font-weight: 800;
+}
+/* line 361, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .seasonNumber {
+  margin-bottom: 30px;
+}
+/* line 365, ../../app/common/components/playList/_playList.scss */
+.vodListArea .seriesVods .listScrollWrapper {
+  left: 0px;
+}
+/* line 370, ../../app/common/components/playList/_playList.scss */
+.vodListArea .vodBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+@keyframes episodesOpen {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 1000px;
+  }
+}
+/* line 387, ../../app/common/components/playList/_playList.scss */
+.selectedSeries {
+  margin-bottom: 50px !important;
+}
+/* line 389, ../../app/common/components/playList/_playList.scss */
+.selectedSeries .seriesContent {
+  border-bottom: 5px #e6e6e6 solid !important;
+}
+
+/* line 393, ../../app/common/components/playList/_playList.scss */
+.selectedSeries::after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #e6e6e6;
+  border-width: 25px;
+  margin-left: -25px;
+  margin-top: 0px;
+}
+
+/* line 408, ../../app/common/components/playList/_playList.scss */
+.nowPlayingImg {
+  height: 30px;
+  width: 30px;
+  padding-left: 3px;
+}
+
+/* line 414, ../../app/common/components/playList/_playList.scss */
+.nowPlayingLive {
+  top: 0px !important;
+}
+
+/* line 1, ../../app/common/components/player/_player.scss */
+.playerContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+/* line 7, ../../app/common/components/player/_player.scss */
+.playerContainer .fullScreenMode {
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  z-index: 0;
+}
+/* line 15, ../../app/common/components/player/_player.scss */
+.playerContainer .overlay .adTimer {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px 20px;
+  top: 100px;
+  right: 50px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+/* line 25, ../../app/common/components/player/_player.scss */
+.playerContainer .overlay .upNextContainer {
+  position: absolute;
+  left: 90px;
+  top: 813px;
+  width: 820px;
+  height: 200px;
+  background: #1a1a1a;
+}
+/* line 33, ../../app/common/components/player/_player.scss */
+.playerContainer .overlay .upNextContainer .upNextImage {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 320px;
+  height: 180px;
+}
+/* line 41, ../../app/common/components/player/_player.scss */
+.playerContainer .overlay .upNextContainer .upNextCounter {
+  position: absolute;
+  left: 360px;
+  top: 20px;
+  width: 290px;
+  height: 40px;
+}
+/* line 49, ../../app/common/components/player/_player.scss */
+.playerContainer .overlay .upNextContainer .upNextTitle {
+  position: absolute;
+  left: 360px;
+  top: 74px;
+  width: 445px;
+  height: 120px;
+}
+
+/* line 1, ../../app/components/featured/_featured.scss */
+.featuredContentWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+/* line 9, ../../app/components/featured/_featured.scss */
+.featuredContentWrapper .full-overlay {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: .0;
+  transition: opacity .5s ease-in-out;
+}
+/* line 17, ../../app/components/featured/_featured.scss */
+.featuredContentWrapper .partial-overlay {
+  position: absolute;
+  top: 471px;
+  opacity: .0;
+  transition: opacity .5s ease-in-out;
+}
+/* line 23, ../../app/components/featured/_featured.scss */
+.featuredContentWrapper .overlay-active {
+  opacity: .9;
+}
+
+/* line 28, ../../app/components/featured/_featured.scss */
+.page {
+  opacity: 1;
+  -webkit-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+/* line 33, ../../app/components/featured/_featured.scss */
+.featuredListContainer {
+  position: absolute;
+  top: 50px;
+  -webkit-transition: transform .5s ease-in-out;
+}
+/* line 38, ../../app/components/featured/_featured.scss */
+.featuredListContainer .blankWindow {
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+
+/* line 1, ../../app/components/settings/_settings.scss */
+.settings-container {
+  position: absolute;
+  width: 1920;
+  height: 1080px;
+  background-color: #13161E;
+  background-image: url("../images/cnnDarkBg.png");
+  z-index: 80;
+  margin: 0px 0px 0px 0px;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 13, ../../app/components/settings/_settings.scss */
+.settings-container .settings-overlay {
+  position: absolute;
+  margin: 0px;
+  background-color: rgba(100, 100, 100, 0.17);
+  width: 640px;
+  height: 1080px;
+  padding-top: 0px;
+  z-index: 100;
+}
+
+/* line 26, ../../app/components/settings/_settings.scss */
+nav {
+  text-align: left;
+  width: 480px;
+}
+/* line 30, ../../app/components/settings/_settings.scss */
+nav ul {
+  list-style: none;
+  padding: 2em;
+}
+/* line 35, ../../app/components/settings/_settings.scss */
+nav ul li {
+  display: inline-block;
+}
+
+/* line 44, ../../app/components/settings/_settings.scss */
+.build-number {
+  font-size: 14px;
+  margin: 200px 20px 0 150px;
+}
+
+/* line 49, ../../app/components/settings/_settings.scss */
+.settings-content {
+  font-size: 14px;
+}
+
+/* line 54, ../../app/components/settings/_settings.scss */
+.settings-details {
+  color: #e6e6e6;
+  position: absolute;
+  margin: 170px 13px 0px 800px;
+  float: right;
+  width: 910px;
+  height: 800px;
+  z-index: 90;
+}
+
+/* line 66, ../../app/components/settings/_settings.scss */
+.settings-navigation {
+  position: relative;
+  display: block;
+  float: left;
+  height: 100%;
+  padding-top: 340px;
+  width: 620px;
+}
+/* line 76, ../../app/components/settings/_settings.scss */
+.settings-navigation nav li:last-child {
+  margin-bottom: 60px;
+}
+
+/* line 83, ../../app/components/settings/_settings.scss */
+.settings-child-content {
+  position: relative;
+  display: block;
+  float: left;
+  height: 100%;
+  padding-top: 140px;
+  width: 1300px;
+}
+
+/* line 92, ../../app/components/settings/_settings.scss */
+.settingsMenuItem {
+  position: relatvie;
+  margin-left: 60px;
+  width: 500px;
+  height: 76px;
+  border-radius: 10px;
+}
+/* line 99, ../../app/components/settings/_settings.scss */
+.settingsMenuItem a {
+  position: absolute;
+  text-decoration: none;
+  line-height: 45px;
+  margin: 15px 0 0 30px;
+  font-size: 36px;
+  font-weight: 800;
+  color: white;
+}
+/* line 109, ../../app/components/settings/_settings.scss */
+.settingsMenuItem.focused {
+  background: white;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transition: -webkit-transform .25s;
+}
+/* line 114, ../../app/components/settings/_settings.scss */
+.settingsMenuItem.focused a {
+  color: #1A1A1A;
+}
+
+/* line 120, ../../app/components/settings/_settings.scss */
+.settingsSelected {
+  background: #404040;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+}
+/* line 124, ../../app/components/settings/_settings.scss */
+.settingsSelected a {
+  color: #737373;
+}
+
+/* line 1, ../../app/components/settings/signIn/_signIn.scss */
+.signin-content {
+  margin: 80px 0 0 0;
+  color: white;
+  font-size: 22px;
+}
+
+/* line 7, ../../app/components/settings/signIn/_signIn.scss */
+.signin-content h3 {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 80px;
+  letter-spacing: 25px;
+  font-size: 60px;
+  letter-spacing: 25px;
+  height: 40px;
+}
+
+/* line 18, ../../app/components/settings/signIn/_signIn.scss */
+.signin-content p {
+  color: #e6e6e6;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial;
+  text-align: center;
+}
+
+/* line 26, ../../app/components/settings/signIn/_signIn.scss */
+.login {
+  position: relative;
+  z-index: 2000;
+}
+/* line 30, ../../app/components/settings/signIn/_signIn.scss */
+.login .activation {
+  width: 1340px;
+  margin: 95px auto 110px auto;
+  color: #595959;
+  text-align: center;
+}
+/* line 36, ../../app/components/settings/signIn/_signIn.scss */
+.login .activation h2 {
+  font-size: 57px;
+  margin-bottom: 60px;
+  color: white;
+}
+/* line 42, ../../app/components/settings/signIn/_signIn.scss */
+.login .activation .regCode {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 80px;
+  letter-spacing: 25px;
+}
+/* line 49, ../../app/components/settings/signIn/_signIn.scss */
+.login .activation p {
+  font-size: 33px;
+  margin-bottom: 80px;
+}
+/* line 53, ../../app/components/settings/signIn/_signIn.scss */
+.login .activation p .activate-link,
+.login .activation p .active-link a {
+  color: white;
+  text-decoration: none;
+}
+/* line 62, ../../app/components/settings/signIn/_signIn.scss */
+.login .activation.backgroundBlack {
+  padding-top: 1px;
+  padding-bottom: 60px;
+  border: 5px solid #FFFFFF;
+}
+/* line 69, ../../app/components/settings/signIn/_signIn.scss */
+.login .reg-buttons {
+  margin-left: 40px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* line 88, ../../app/components/settings/signIn/_signIn.scss */
+.activationSuccessfulMessage {
+  font-size: 50px;
+  margin-bottom: 100px;
+  color: #FFFFFF;
+}
+
+/* line 94, ../../app/components/settings/signIn/_signIn.scss */
+.cobrandLogoContainer {
+  margin-bottom: 100px;
+}
+
+/* line 1, ../../app/components/settings/privacyPolicy/_privacyPolicy.scss */
+.ui-header {
+  text-align: center;
+  font-family: Arial;
+}
+
+/* line 7, ../../app/components/settings/privacyPolicy/_privacyPolicy.scss */
+.ui-title {
+  text-align: center;
+}
+
+/* line 12, ../../app/components/settings/privacyPolicy/_privacyPolicy.scss */
+.copy-text {
+  font-size: 1.2em;
+  font-family: Arial;
+  text-align: left;
+  margin-left: 90px;
+  overflow-y: scroll;
+  line-height: 1.5;
+  height: 70%;
+  width: 80%;
+}
+
+/* line 24, ../../app/components/settings/privacyPolicy/_privacyPolicy.scss */
+.ui-content {
+  font-size: 1.5em;
+}
+
+/* line 1, ../../app/components/settings/settingsNavigation/_settingsNavigation.scss */
+.navigation-container {
+  position: relative;
+  width: 800px;
+  height: 100px;
+  margin-left: 180px;
+}
+
+/* line 8, ../../app/components/settings/settingsNavigation/_settingsNavigation.scss */
+.nav-item {
+  float: left;
+  margin-left: 130px;
+  margin-top: 35px;
+}
+/* line 13, ../../app/components/settings/settingsNavigation/_settingsNavigation.scss */
+.nav-item.focused {
+  border-bottom: 5px solid #8e0011;
+}
+
+/* line 1, ../../app/components/settings/termsConditions/_termsConditions.scss */
+.terms-content {
+  margin-left: 78px;
+}
+/* line 3, ../../app/components/settings/termsConditions/_termsConditions.scss */
+.terms-content h1 {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 8, ../../app/components/settings/termsConditions/_termsConditions.scss */
+.terms-content h2 {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 13, ../../app/components/settings/termsConditions/_termsConditions.scss */
+.terms-content p {
+  line-height: 1.5;
+  font-size: 1.5em;
+  overflow-y: scroll;
+}
+
+/* line 1, ../../app/components/settings/accessibility/_accessibility.scss */
+.my-cnn-content {
+  text-align: center;
+}
+
+/* line 1, ../../app/components/search/_search.scss */
+.search-content {
+  width: 1920px;
+  height: 1080px;
+  background-color: black;
+  padding-top: 100px;
+}
+
+/* line 1, ../../app/components/splash/_splash.scss */
+.splashContainer {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  background-color: black;
+}
+
+/* line 12, ../../app/components/splash/_splash.scss */
+.cta {
+  position: absolute;
+  font-family: Arial;
+  text-align: center;
+  margin: 580px 0px 0px 710px;
+  width: 550px;
+  font-size: 50px;
+  z-index: 190;
+}
+
+/* line 22, ../../app/components/splash/_splash.scss */
+.animated {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: 100;
+}
+
+/* line 33, ../../app/components/splash/_splash.scss */
+.splashClip {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+/* line 39, ../../app/components/splash/_splash.scss */
+#splashText {
+  position: absolute;
+  margin: 680px 0 0 630px;
+  color: #fff;
+  opacity: 0;
+  font-weight: 900;
+  font-size: 55px;
+  width: 800px;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-name: splashTextTransition;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  z-index: 190;
+}
+
+/* line 56, ../../app/components/splash/_splash.scss */
+#splashText::after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  content: "\2026";
+  width: 0px;
+}
+
+@-webkit-keyframes ellipsis {
+  100% {
+    width: 1em;
+  }
+}
+@-webkit-keyframes splashTextTransition {
+  0% {
+    -webkit-transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+    -webkit-transition: 1s;
+  }
+}
+/* line 1, ../../app/components/shows/_shows.scss */
+.showsContentWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: black;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 11, ../../app/components/shows/_shows.scss */
+.page {
+  opacity: 1;
+  -webkit-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+/* line 16, ../../app/components/shows/_shows.scss */
+.showsListContainer {
+  position: absolute;
+  -webkit-transition: transform .5s ease-in-out;
+  background: black;
+}
+/* line 21, ../../app/components/shows/_shows.scss */
+.showsListContainer .blankWindow {
+  width: 100%;
+  height: 540px;
+  display: block;
+}
+/* line 27, ../../app/components/shows/_shows.scss */
+.showsListContainer .showsBackground {
+  background-repeat: no-repeat !important;
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 39, ../../app/components/shows/_shows.scss */
+.showsMetaDataContainer {
+  margin: 160px 0 0 90px;
+}
+/* line 42, ../../app/components/shows/_shows.scss */
+.showsMetaDataContainer .showsTitle {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+/* line 48, ../../app/components/shows/_shows.scss */
+.showsMetaDataContainer .showsSeason {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+/* line 55, ../../app/components/shows/_shows.scss */
+.showsMetaDataContainer .showsDescription {
+  margin: 0;
+  font-size: 28px;
+  max-width: 925px;
+}
+
+/* line 1, ../../app/components/category/_category.scss */
+.categoryContentWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+/* line 9, ../../app/components/category/_category.scss */
+.categoryContentWrapper .overlay {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+}
+
+/* line 18, ../../app/components/category/_category.scss */
+.categoryTitle {
+  font-family: 'CNNSansDisplay';
+  margin: 200px 0 20px 0;
+  font-size: 46px;
+  text-transform: uppercase;
+}
+
+/* line 25, ../../app/components/category/_category.scss */
+.categoryList {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+}
+
+/* line 30, ../../app/components/category/_category.scss */
+.categoryListContainer {
+  -webkit-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+/* line 1, ../../app/components/live/_live.scss */
+.liveContentWrapper {
+  width: 1920px;
+  height: 1080px;
+  background: transparent;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* line 8, ../../app/components/live/_live.scss */
+.liveContentWrapper .liveListWrapper {
+  position: absolute;
+  top: 770px;
+}
+/* line 13, ../../app/components/live/_live.scss */
+.liveContentWrapper .unauthenticateUserMessageLive {
+  position: absolute;
+  top: 400px;
+  padding-left: 480px;
+  padding-right: 480px;
+  text-align: center;
+}
+
+/* line 1, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox {
+  position: absolute;
+  z-index: 2000;
+  max-width: 900px;
+  max-height: 410px;
+  border: 2px solid white;
+  padding: 30px 30px 10px 30px;
+  background-color: #000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* line 17, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox .infoModalContainer .informationContainer {
+  padding: 20px 0 20px 20px;
+}
+/* line 20, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox .infoModalContainer .informationContainer .informationTitleContainer {
+  text-align: left;
+  margin-bottom: 50px;
+}
+/* line 24, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox .infoModalContainer .informationContainer .informationTitleContainer span.informationTitle {
+  font-weight: bold;
+  font-size: 50px;
+  display: block;
+}
+/* line 31, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox .infoModalContainer .informationContainer .informationMessageContainer {
+  text-align: left;
+  min-height: 180px;
+}
+/* line 35, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox .infoModalContainer .informationContainer .informationMessageContainer span.informationMessage {
+  font-size: 28px;
+  display: block;
+}
+/* line 42, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox .infoModalContainer .informationOptionsContainer {
+  margin-bottom: 15px;
+}
+/* line 44, ../../app/common/components/informationModal/_informationModal.scss */
+.infoModalbox .infoModalContainer .informationOptionsContainer .reg-buttons {
+  margin-left: 65px;
+  position: relative;
+  text-align: right;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* line 3, ../../utilities/playerControls/_playerControls.scss */
+.playerControlsContainer {
+  position: relative;
+}
+/* line 6, ../../utilities/playerControls/_playerControls.scss */
+.playerControlsContainer button.playerButton {
+  background-color: transparent;
+  height: 100%;
+  width: 50px;
+  margin-right: 10px;
+}
+/* line 13, ../../utilities/playerControls/_playerControls.scss */
+.playerControlsContainer div.progressBarContainer {
+  display: inline-block;
+  position: relative;
+  width: 1485px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+/* line 21, ../../utilities/playerControls/_playerControls.scss */
+.playerControlsContainer div.progressBarContainer div.scrubberBar {
+  display: inline-block;
+  position: absolute;
+  background-color: #808080;
+  height: 20px;
+  width: 1485px;
+  bottom: 0px;
+  border-radius: 25px;
+}
+/* line 31, ../../utilities/playerControls/_playerControls.scss */
+.playerControlsContainer div.progressBarContainer div.bufferBar {
+  display: inline-block;
+  position: absolute;
+  background-color: #E0E0E0;
+  height: 20px;
+  width: 0;
+  bottom: 0px;
+  border-radius: 25px;
+}
+/* line 41, ../../utilities/playerControls/_playerControls.scss */
+.playerControlsContainer div.progressBarContainer div.playPositionBar {
+  display: inline-block;
+  position: absolute;
+  background-color: #FF0000;
+  height: 20px;
+  width: 0;
+  bottom: 0px;
+  border-radius: 25px;
+}
+
+/* line 1, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox {
+  position: absolute;
+  z-index: 2000;
+  max-width: 900px;
+  max-height: 410px;
+  border: 2px solid white;
+  padding: 30px 30px 10px 30px;
+  background-color: #000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* line 17, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox .exitModalContainer .exitContainer {
+  padding: 20px 0 100px 20px;
+}
+/* line 20, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox .exitModalContainer .exitContainer .exitTitleContainer {
+  text-align: left;
+  margin-bottom: 50px;
+}
+/* line 24, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox .exitModalContainer .exitContainer .exitTitleContainer span.exitTitle {
+  font-weight: bold;
+  font-size: 50px;
+  display: block;
+}
+/* line 31, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox .exitModalContainer .exitContainer .exitMessageContainer {
+  text-align: left;
+  min-height: 180px;
+}
+/* line 35, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox .exitModalContainer .exitContainer .exitMessageContainer span.exitMessage {
+  font-size: 28px;
+  display: block;
+}
+/* line 42, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox .exitModalContainer .exitOptionsContainer {
+  margin-bottom: 15px;
+}
+/* line 48, ../../utilities/exitModal/_exitModal.scss */
+.exitModalbox .exitModalContainer .exitOptionsContainer .reg-buttons {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}

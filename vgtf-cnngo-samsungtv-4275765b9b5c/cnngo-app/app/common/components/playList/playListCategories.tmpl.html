@@ -1,0 +1,8 @@
+<div class="categoriesListArea listItem" >
+  <div class="categoriesTitle fontListTitle">{{title}}</div>
+  <caph-list id="list-{{listCategory}}" container-class="categoriesListContainer" wrapper-class="listScrollWrapper" items="item in listData" loop="false">
+    <div id="{{item.id}}" class="categoryItem fontListText"  focusable data-focusable-depth="{{listDepth}}" data-focusable-initial-focus="{{$index === 0}}" on-focused="focus($event, listCategory, this, $index, $first, $last)"  on-blurred="blur($event, listCategory, this)" on-selected="selectCategory(item.categoryCode, item.id, $index)">
+      <div class="categoryContent" style="background: url({{item.imageUrl | imageTransform: 'w_403':'h_227' || ''}}); background-size: 100%;"></div>
+    </div>
+  </caph-list>
+</div>

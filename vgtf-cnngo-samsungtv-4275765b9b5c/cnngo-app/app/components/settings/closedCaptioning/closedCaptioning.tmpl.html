@@ -1,0 +1,9 @@
+<div class="cc-controls">
+   <button class="cc cc-off" data-ng-class='{"ON": "", "OFF": "active"}[ccc.ccState]'>OFF</button>
+   <button class="cc cc-on"  data-ng-class='{"ON": "active", "OFF": ""}[ccc.ccState]'>ON</button>
+</div>
+<div class="cc-content-wrapper">
+   <div id="subtitleArea"></div> 
+   <div class="cc cc-content" style="-webkit-transform: translateY({{ccc.contentPosition}}%);">
+   </div>
+</div>
