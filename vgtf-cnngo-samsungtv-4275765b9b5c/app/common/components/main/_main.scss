@@ -1,0 +1,95 @@
+.masterContainer {
+  	position: relative;
+  	height: 100%;
+
+  	.masterHeader {
+		position: absolute;
+		background-image: url('../images/global_nav.png');
+		background-origin: content-box;
+		top: 0;
+		left: 0;
+		height: 120px;
+		width: 100%;
+		z-index: 10;		
+   	}
+   
+   	.mainContent {
+   		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		z-index: 5;
+   	}
+   	
+   	.slideOut {
+	    height: 0px;
+	}
+
+	.modalContainer{
+		z-index: 11;
+		background-color: rgba(0,0,0,.5);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+
+		.modal {
+			z-index: 20;
+			height: 100%;
+			width: 100%;
+			// display: flex;
+			position: relative;
+		}
+	}
+
+	.playerControlsOuterContainer{
+		position: absolute;
+		width: 100%;
+		height: 26px;
+		bottom: 60px;
+		padding: 0 50px 0 50px;
+		box-sizing: border-box;
+		z-index: 3;
+	}
+	
+	.loadingScreen {
+  		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/cnnDarkBg.png');
+		background-size: 100%;
+    	background-repeat: no-repeat;
+	}
+	
+	.videoContentLoading {
+		@extend .loadingScreen;
+		z-index: 2;
+	}
+	
+	.mainContentLoading {
+		@extend .loadingScreen;
+		z-index: 6;
+	}
+	
+	.loadingSpinner {
+		position: absolute;
+		left: 915px;
+		top: 350px;
+		width: 90px;
+		height: 91px;
+		background: url('../images/busySpinner.png');
+		-webkit-animation: rotate 2.5s infinite linear;
+	}
+}
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to { 
+		-webkit-transform: rotate(360deg);
+	}
+}

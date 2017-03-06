@@ -1,0 +1,59 @@
+.playerContainer {
+	width: 100%;
+	height: 100%;
+  position: relative;
+  z-index: 1;
+  	
+	.fullScreenMode {
+		top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 0;
+	} 
+  .overlay {
+    .adTimer {
+      background: rgba(0,0,0,0.75);
+      padding: 10px 20px;
+      top: 100px;
+      right: 50px;
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+    }
+  	
+  	.upNextContainer {
+  		position: absolute;
+  		left: 90px;
+  		top: 813px;
+  		width: 820px;
+  		height: 200px;
+  		background: $darkergrey;
+  		
+  		.upNextImage {
+  			position: absolute;
+	  		left: 10px;
+	  		top: 10px;
+	  		width: 320px;
+	  		height: 180px;
+  		}
+  		
+  		.upNextCounter {
+  			position: absolute;
+	  		left: 360px;
+	  		top: 20px;
+	  		width: 290px;
+	  		height: 40px;
+  		}
+  		
+  		.upNextTitle {
+  			position: absolute;
+	  		left: 360px;
+	  		top: 74px;
+	  		width: 445px;
+	  		height: 120px;
+  		}
+  	}
+  }	
+}
+

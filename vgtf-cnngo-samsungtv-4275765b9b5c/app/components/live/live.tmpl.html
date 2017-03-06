@@ -1,0 +1,8 @@
+<div class="liveContentWrapper" ng-style="!isAuthenticated && {'background-image':'url(assets/images/cnnDarkBg.png)'}">
+	<div ng-hide="isAuthenticated" class="unauthenticateUserMessageLive fontMessageText">
+		You must sign in with your TV service provider credentials to watch live TV. Please select a channel and follow the instructions to activate.
+	</div>
+	<div class="liveListWrapper">
+		<play-list-live id='0' title='Channels' listData='liveData' playlistidentifier="live"></play-list-live>
+	</div>
+</div>

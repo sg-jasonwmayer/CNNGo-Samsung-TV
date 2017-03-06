@@ -1,0 +1,25 @@
+<div class="seriesListArea listItem" ng-class="{'seriesGridArea': title === ''}">
+    <div class="seriesTitle fontListTitle" ng-hide="title === ''">{{title}}</div>
+    <caph-list id="list-{{listCategory}}" container-class="seriesListContainer" ng-style="" wrapper-class="listScrollWrapper" items="item in listData" loop="false">
+        <div id="{{item.id}}" class="seriesItem fontListText"  focusable data-focusable-depth="{{listDepth}}" data-focusable-initial-focus="{{$index === 0}}" on-focused="focus($event, listCategory, this, $index, $first, $last)"  on-blurred="blur($event, listCategory, this)" on-selected="getVods(item.seriesId, item.titleId, listCategory, item.id, item.title)">
+            <div class="seriesContent" style="background: url('{{item.imageUrl | imageTransform: '':'h_368'}}'); background-size: 100% 100%;"></div>
+        </div>
+    </caph-list>
+</div>
+<div class="vodListArea" ng-show="displayVodContainer">
+	<div class="seriesVods" id="list-vods" >
+		<div class="seasonTitle fontListTitle">{{seriesTitle}}</div>
+		<div class="seasonNumber fontListTitle">{{seasonNumber}}</div>
+		<caph-list id="list-{{listCategory}}-vod" container-class="vodContainer" wrapper-class="listScrollWrapper" items="item in vodData" loop="false">
+			<div id="{{item.id}}" class="episodeContainer" focusable data-focusable-depth="{{listDepth}}" data-focusable-name="{{item.titleId}}" data-focusable-initial-focus="{{$index === 0}}" initial-item-index="{{vodData.length}}"on-focused="focusVod($event, listCategory, this, $index, $first, $last)" on-blurred="blur($event, listCategory, item)" on-selected="selectEpisode($event, item)">
+				<div class="vodItem" style="background: url('{{item.imagePath | imageTransform: 'w_400':'h_225' }}'); background-size: 100% 100%;">
+					<div ng-if="nowPlayingId === item.id" class="nowPlayingContainer"><p class="nowplayingtext">Now Playing</p><img class="nowPlayingImg" src="assets/images/equalizer_Samsung_nowplaying.gif"></div>
+					<div ng-hide="isAuthenticated || item.isAuthenticatedContent === false" class="vodLock"></div>
+				</div>
+				<div class="episodeTitle fontListTitle">{{item.episodeName | limitTo : 20 }}{{item.episodeName.length > 20 ? '...' : ''}}</div>
+				<div class="episodeDescription fontListText" ng-hide="currentFocus !== $index">{{item.description | limitTo : 180}}{{item.description.length > 180 ? '...' : ''}}</div>
+			</div>
+		</caph-list>
+	</div>
+	<div class="vodBackground" style="background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) ), url('{{backgroundUrl}}'); background-size: 100%;"></div>
+</div>

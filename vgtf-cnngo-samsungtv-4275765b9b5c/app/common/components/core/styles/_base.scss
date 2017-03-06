@@ -1,0 +1,54 @@
+body {
+    color: $white;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: "CNNSansDisplayLight", serif;
+    letter-spacing: .04em;
+    height: 1080px;
+    overflow: hidden;
+    background-color: $black;
+    margin: 0px;
+}
+
+.mainContainer {
+	width: $screenMinWidth;
+    height: $screenMinHeight;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mainView {
+	height: 100%;
+}
+
+button {
+    width: 340px;
+    height: 90px;
+    border: none;
+    background-color: #404040;
+    font-size: 30px;
+    color: $purewhite;
+    text-transform: uppercase;
+    margin-left:10px;
+    -webkit-transition: -webkit-transform .25s;
+    border-radius: 7px;
+
+    &:first-child {
+        margin-right: 90px;
+        &.continue {
+            margin: 80px 0 0 20px;
+        }
+    }
+
+    &.focus {
+        outline: 3px solid $purewhite;
+        outline-offset: -3px;
+    }
+}
+
+.selectedButton{
+    background-color: #FFFFFF;
+    color: #000000;
+}

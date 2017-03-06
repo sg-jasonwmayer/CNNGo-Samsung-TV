@@ -1,0 +1,99 @@
+.signin-content  {
+  margin: 80px 0 0 0;
+  color:white; 
+  font-size: 22px;
+}
+
+.signin-content h3{
+  font-size: 60px;
+  color: $purewhite;
+  margin-bottom: 80px;
+  letter-spacing: 25px;
+  font-size: 60px; 
+  letter-spacing: 25px; 
+  height: 40px;
+}
+
+
+.signin-content p {
+  color: $white;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial;
+  text-align:center;
+}
+
+.login {
+    position: relative;
+    z-index: 2000;
+    
+    .activation {
+        width: 1340px;
+        margin: 95px auto 110px auto;
+        color: $grey;
+        text-align: center;
+
+        h2 {
+            font-size: 57px;
+            margin-bottom: 60px;
+            color: $purewhite;
+        }
+
+        .regCode {
+            font-size: 60px;
+            color: $purewhite;
+            margin-bottom: 80px;
+            letter-spacing: 25px; 
+        }
+
+        p {
+            font-size: 33px;
+            margin-bottom: 80px;
+
+            .activate-link,
+            .active-link a {
+                color: $purewhite;
+                text-decoration: none;
+            }
+
+        }
+    }
+
+    .activation.backgroundBlack {
+        padding-top: 1px;
+        padding-bottom: 60px;
+        border: 5px solid #FFFFFF;
+    }   
+
+    
+    .reg-buttons {
+        margin-left:40px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        
+    }
+}
+
+.activationSuccessfulImageContainer {
+    .activationSuccessfulImage {
+        
+    }
+}
+
+.activationSuccessfulMessage {
+    font-size: 50px;
+    margin-bottom: 100px;
+    color: #FFFFFF;
+}
+
+.cobrandLogoContainer {
+    margin-bottom: 100px;
+    .cobrandLogo {
+
+    }
+}
