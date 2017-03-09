@@ -166,6 +166,7 @@
             }
         });
         
+        
         $scope.$on(EVENTS.displayVideoContentLoading, function(event, state) {
             $scope.displayVideoContentLoading = state;
         });
