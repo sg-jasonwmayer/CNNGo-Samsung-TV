@@ -14,6 +14,7 @@
             focusController.focus($('#' + APP_CONSTANTS.globalNavigationItems.featured.id));
         }
         
+        
         $scope.isAuthenticated = AuthManager.isAuthenticated();
         $scope.liveData  = {};
         $scope.liveData.data = dataCacheService.getLiveData();
