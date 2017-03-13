@@ -7,6 +7,8 @@
 
     function searchController($rootScope, $scope, $state) {
         console.log('Inside the search controller');
+        
+        var = search;
        
     }
     
