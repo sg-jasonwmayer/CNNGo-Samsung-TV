@@ -1,6 +1,6 @@
 {
   "name": "cnngo",
-  "version": "0.1.0",
+  "version": "1.10.10",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-compass": "^1.1.1",
@@ -12,4 +12,5 @@
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-watch": "^1.0.0"
   }
+  
 }
