@@ -1,6 +1,6 @@
 /**
  * @module CNNgoApp
- * 
+ * DEVELOPED BY JASON MAYER STUDIO
  * @requires ui.router
  */
 var app = angular.module('CNNgoApp', [
