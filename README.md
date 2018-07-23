@@ -7,6 +7,8 @@ What is this repository for?
 • Learn Markdown
 • How do I get set up?
   ### app.js lives in core components folder ###
+  
+  dsk8r
 
 Summary of set up
 Configuration
