@@ -16,7 +16,7 @@ module.exports = function(spyke) {
 			}
 		}
 	});
-	spyke.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-contrib-spyke');
+	spyke.loadNpmTasks('spyke-contrib-compass');
+	grunt.loadNpmTasks('spyke-contrib-spyke');
 	grunt.registerTask('default',['spyke']);
 }
