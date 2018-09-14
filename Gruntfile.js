@@ -1,6 +1,6 @@
 module.exports = function(spyke) {
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+	spyke.initConfig({
+		pkg: spyke.file.readJSON('package.json'),
 		compass: {
 			dist: {
 				options: {
@@ -16,7 +16,7 @@ module.exports = function(spyke) {
 			}
 		}
 	});
-	grunt.loadNpmTasks('grunt-contrib-compass');
+	spyke.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-spyke');
 	grunt.registerTask('default',['spyke']);
 }
