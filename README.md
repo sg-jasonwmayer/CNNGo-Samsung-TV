@@ -13,6 +13,10 @@ What is this repository for?
   ### app.js lives in core components folder ###
 
 
+
+
+
+
 Summary of set up
 Configuration
 Dependencies
