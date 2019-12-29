@@ -4,7 +4,7 @@ README
 
 
 What is this repository for?
-• Quick summary
+
 • Version
 • Learn Markdown
 • How do I get set up?
