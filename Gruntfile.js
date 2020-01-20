@@ -4,11 +4,6 @@
  // 2. "File > Add Folder to Workspace" this specific folder in VSCode with ESLint extension
  // 3. Changes to the rule source should get picked up without restarting ESLint server
 
-  function Foo() {
-   if (condition) {
-     useEffect(() => {});
-   }
- }
 View file   
 12  fixtures/eslint/package.json
 @@ -0,0 +1,12 @@
