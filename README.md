@@ -1,4 +1,4 @@
-# CNNGoSamsungTV - LEGACY old
+# CNNGoSamsungTV - LEGACY'd
 README
 
 
