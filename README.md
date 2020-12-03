@@ -1,5 +1,4 @@
 # CNNGoSamsungTV - LEGACY'd
-README
 AngularJS project. This application is built using Tizen, Samsungs OS and is written with the AngularJS (Angular 1.75) Framework.
 
 
