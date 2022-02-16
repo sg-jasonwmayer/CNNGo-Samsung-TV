@@ -16,9 +16,6 @@ What is this repository for?
 
 
 
-
-
-
 Summary of set up
 Configuration
 Dependencies
