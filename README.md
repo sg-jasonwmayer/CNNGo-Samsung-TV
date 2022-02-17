@@ -16,7 +16,7 @@ What is this repository for?
 
 
 
-Summary of set up
+Summary of set ups
 Configuration
 Dependencies
 Database configuration
