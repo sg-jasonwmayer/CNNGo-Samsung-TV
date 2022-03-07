@@ -9,9 +9,7 @@ What is this repository for?
 • Learn Markdown
 • How do I get set up?
 
-
   ### app.js lives in core components folder ###
-
 
 Summary of set ups
 Configuration
