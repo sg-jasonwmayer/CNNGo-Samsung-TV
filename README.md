@@ -10,7 +10,6 @@ What is this repository for?
 • How do I get set up?
 
   ### app.js lives in core components folder ###
-
 Summary of set ups
 Configuration
 Dependencies
